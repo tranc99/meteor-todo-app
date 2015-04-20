@@ -1,0 +1,26 @@
+<head>
+  <title>Task List</title>
+</head>
+
+<body>
+  <h1>Welcome, Here Are Your Tasks!</h1>
+
+  {{> todos}}
+</body>
+
+<template name="todos">
+    {{#each todos}}
+        {{> todo}}
+        <br>
+    {{/each}}
+    {{> createTodo}}
+</template>
+
+<template name="todo">
+    <p>{{name}}</p>
+</template>
+
+<template name="createTodo">
+    <input id="newTodo" type="text">
+    <button>Save</button>
+</template>
